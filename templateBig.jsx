@@ -173,9 +173,9 @@ var bigReact = new React.createClass({
 		vote.image_low = o.big.image_low;
 		vote.XP = o.XP;
 		vote.YP = o.YP;
-		vote.from_user = userId;
+		vote.from = userId;
 		vote._id = Random.id();
-		vote.to_user = vote.imageId;
+		vote.to = vote.imageId;
 		// }
 
 		Unionize.connect(vote);
