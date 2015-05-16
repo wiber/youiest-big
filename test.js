@@ -12,8 +12,8 @@ var fromUser = {
 }
 DummyData = {
   "_id": "mTFJJYEMHscg62HdP",
-  "from_user": fromUser._id,
-  "to_user": toUser._id,
+  "from": fromUser._id,
+  "to": toUser._id,
   "picture_low": "http://i.imgur.com/DM4ZEp8.jpg"
 }
 
@@ -30,8 +30,8 @@ if(Meteor.isServer){
 
 	
 
-	Meteor.users.insert(fromUser);
-	Meteor.users.insert(toUser);
+	WI.insert(fromUser);
+	WI.insert(toUser);
 
 	Unionize.connect(DummyData);
 }
